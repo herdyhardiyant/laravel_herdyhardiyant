@@ -42,7 +42,7 @@
                 <td>{{ $patient->nama_pasien }}</td>
                 <td>{{ $patient->alamat }}</td>
                 <td>{{ $patient->telepon}}</td>
-                <td>{{ $patient->hospital_id}}</td>
+                <td>{{ $patient->hospital->nama_rumah_sakit ?? '-'}}</td>
                 <td>
                     <a href="{{ route('patients.edit', $patient->id) }}" class="btn btn-sm btn-warning">Edit</a>
                     <form action="{{ route('patients.destroy', $patient->id) }}" method="POST" style="display:inline-block">
